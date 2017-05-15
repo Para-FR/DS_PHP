@@ -1,0 +1,56 @@
+.bouton-vert {
+    background-color:#44c767;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+}
+
+.bouton-gris {
+    background-color: #bcd2d9;
+    border:1px solid #b7cdd4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    text-decoration:none;
+}
+.bouton:hover {
+    background-color:#5cbf2a;
+}
+.bouton:active {
+    position:relative;
+    top:1px;
+}
+input[type=text] {
+    background: transparent;
+    border: none;
+}
+.orange {
+    padding: 10px;
+    border: 2px solid orange;
+}
+
+.alert-resultat {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+
