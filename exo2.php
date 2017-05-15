@@ -1,19 +1,26 @@
 <?php
 $error = '';
 
-// Multiplication
+// Vérifie si tous les boutons sont set
+// Puis les calculs se font en fonction du bouton
 if (isset($_POST['additionner']) || isset($_POST['soustraire']) || isset($_POST['multiplier']) || isset($_POST['diviser'])) {
+    // si "value1" n'est pas définis, ou vide, ou n'est pas numérique
     if (!isset($_POST['value1']) || empty($_POST['value1']) || !is_numeric($_POST['value1'])) {
+        // si "value1" vaut 0 et que on choisit le bouton "diviser"
         if ($_POST['value1'] == 0 && isset($_POST['diviser'])) {
+            // on affiche un message d'erreur
             $error .= "<br/> Erreur valeur 1 (Division par 0 impossible)";
         } else {
+            // si les conditions sont respectées sauf la condition "n'est pas numérique", on affiche un message d'erreur
             if (!is_numeric($_POST['value1'])) {
                 $error .= "<br/> Erreur Valeur 1 (Pas de lettres ni caractères spéciaux !";
             } else {
+                // sinon on enregistre la valeur
                 $value1 = $_POST['value1'];
             }
         }
     }
+    // on fait les mêmes tests pour "value2"
     if (!isset($_POST['value2']) || empty($_POST['value2'])) {
         if ($_POST['value2'] == 0 && isset($_POST['diviser'])) {
             $error .= "<br/> Erreur valeur 2 (Division par 0 impossible)";
@@ -28,6 +35,7 @@ if (isset($_POST['additionner']) || isset($_POST['soustraire']) || isset($_POST[
         $value1 = $_POST['value1'];
         $value2 = $_POST['value2'];
     }
+    // si il n'y a pas d'erreur on procède aux calculs
     if ($error == '') {
         if (isset($_POST['soustraire'])) {
             $resultat = $value1 - $value2;
@@ -42,25 +50,27 @@ if (isset($_POST['additionner']) || isset($_POST['soustraire']) || isset($_POST[
 }
 ?>
 <link rel="stylesheet" href="master.css">
-<div class="container">
+<div class="">
     <fieldset>
         <legend>Calculatrice en Ligne</legend>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="bd-callout bd-calloutt left">
+        <div class="">
+            <div class="">
+                <div class="">
                     <h4 id="bloc">Calculatrice</h4>
-                    <form class="form-group" action="#" method="post">
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon">Valeur 1 :</div>
-                            <input type="text" class="form-control" name="value1" id="inlineFormInputGroupvalue2"
+                    <form class="" action="#" method="post">
+                        <div class="">
+                            <div class="">Valeur 1 :</div>
+                            <input type="text" class="" name="value1" "
+                            <!--permet de garder les valeurs entrées une fois que l'on a validé-->
                                    value="<?php if (isset($value1) && !empty($value1)) {
                                        echo $value1;
                                    } ?>">
                         </div>
                         <hr>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon">Valeur 2 :</div>
-                            <input type="text" class="form-control" name="value2" id="inlineFormInputGroupvalue2"
+                        <div class="">
+                            <div class="">Valeur 2 :</div>
+                            <input type="text" class="" name="value2"
+                            <!--permet de garder les valeurs entrées une fois que l'on a validé-->
                                    value="<?php if (isset($value2) && !empty($value2)) {
                                        echo $value2;
                                    } ?>">

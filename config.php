@@ -1,7 +1,6 @@
 <?php
-$bdd = new mysqli("localhost", "root", "", "entreprise");
-$bdd2 = new mysqli("localhost", "root", "", "ecommerce");
-$bdd3 = new mysqli("localhost", "root", "", "immobilier");
+$bdd = new mysqli("localhost", "root", "");
+
 
 if ($bdd->connect_error) die('Un Problème est survenu lors de la connexion à la BDD :' .$bdd->connect_error);
 

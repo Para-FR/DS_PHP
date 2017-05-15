@@ -1,13 +1,17 @@
 <?php
 
 function executeRequete($req){
-    global $bdd;
-    $result = $bdd->query($req);
+    $bdd_selected = $_POST['bdd_requete'];
+        $bdds = new mysqli("localhost", "root", "", $bdd_selected);
+        $result = $bdds->query($req);
 
-    if (!$result) {
-        die("Erreur sur la requête sql. <br/>Message :" .$bdd->error. "<br/> Code : " . $req);
-    }
-    return $result;
+        if (!$result) {
+            die("Erreur sur la requête sql. <br/>Message :" .$bdds->error. "<br/> Code : " . $req);
+        }
+        return $result;
+
+
+
 
 }
 
