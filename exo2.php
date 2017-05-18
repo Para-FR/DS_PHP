@@ -60,17 +60,18 @@ if (isset($_POST['additionner']) || isset($_POST['soustraire']) || isset($_POST[
                     <form class="" action="#" method="post">
                         <div class="">
                             <div class="">Valeur 1 :</div>
-                            <input type="text" class="" name="value1" "
                             <!--permet de garder les valeurs entrées une fois que l'on a validé-->
-                                   value="<?php if (isset($value1) && !empty($value1)) {
-                                       echo $value1;
-                                   } ?>">
+                            <input type="text" class="" name="value1" "
+                            value="<?php if (isset($value1) && !empty($value1)) {
+                                echo $value1;
+                            } ?>">
                         </div>
                         <hr>
                         <div class="">
                             <div class="">Valeur 2 :</div>
-                            <input type="text" class="" name="value2"
                             <!--permet de garder les valeurs entrées une fois que l'on a validé-->
+                            <input type="text" class="" name="value2"
+
                                    value="<?php if (isset($value2) && !empty($value2)) {
                                        echo $value2;
                                    } ?>">
@@ -87,10 +88,11 @@ if (isset($_POST['additionner']) || isset($_POST['soustraire']) || isset($_POST[
                             </div>
                         <?php } ?>
                         <br/>
-                        <input class="bouton" type="submit" name="additionner" value="Additionner">
-                        <input class="bouton" type="submit" name="soustraire" value="Soustraire">
-                        <input class="bouton" type="submit" name="multiplier" value="Multiplier">
-                        <input class="bouton" type="submit" name="diviser" value="Diviser">
+                        <input class="bouton bouton-vert" type="submit" name="additionner" value="Additionner">
+                        <input class="bouton bouton-vert" type="submit" name="soustraire" value="Soustraire">
+                        <input class="bouton bouton-vert" type="submit" name="multiplier" value="Multiplier">
+                        <input class="bouton bouton-vert" type="submit" name="diviser" value="Diviser">
+                    </form>
                 </div>
             </div>
         </div>
